@@ -3,9 +3,10 @@ const fs = require('fs');
 const recursive = require('recursive-readdir');
 
 try {
-  const localisationFolder = core.getInput('localisation_folder');
+  // const localisationFolder = core.getInput('localisation_folder');
+  const localisationFolder = 'localisation';
   console.log(`Fixing locs in: ${localisationFolder}`);
-  recursive(localisationFolder, ['!*.yml'], (err, files) => {
+  recursive(localisationFolder, ['!*.yml', '*_l_english.yml'], (err, files) => {
     if (err) {
       throw err;
     }

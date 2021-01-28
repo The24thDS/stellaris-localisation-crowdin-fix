@@ -1,6 +1,6 @@
 {
   "name": "stellaris-localisation-crowdin-fix",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fixes the localisation files exported from Crowdin.",
   "main": "index.js",
   "scripts": {},
