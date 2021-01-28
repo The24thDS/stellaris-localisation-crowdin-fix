@@ -1,5 +1,5 @@
 name: 'Stellaris Localisation Crowdin Fix'
-description: 'Fixes the localisation files exported from Crowdin by removing the 3 heading dashes, setting the proper l_language and saving the file with BOM.'
+description: 'Fixes the localisation files exported from Crowdin.'
 author: The24thDS
 branding:
   icon: 'repeat'

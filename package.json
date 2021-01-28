@@ -1,7 +1,7 @@
 {
   "name": "stellaris-localisation-crowdin-fix",
   "version": "1.0.0",
-  "description": "Fixes the localisation files exported from Crowdin by removing the 3 heading dashes, setting the proper l_language and saving the file with BOM.",
+  "description": "Fixes the localisation files exported from Crowdin.",
   "main": "index.js",
   "scripts": {},
   "repository": {
