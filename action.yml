@@ -1,0 +1,13 @@
+name: 'Stellaris Localisation Crowdin Fix'
+description: 'Fixes the localisation files exported from Crowdin by removing the 3 heading dashes, setting the proper l_language and saving the file with BOM.'
+author: The24thDS
+branding:
+  icon: 'repeat'
+  color: 'blue'
+inputs:
+  localisation_folder:
+    description: 'Localisation folder path'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'

@@ -1,0 +1,22 @@
+{
+  "name": "stellaris-localisation-crowdin-fix",
+  "version": "1.0.0",
+  "description": "Fixes the localisation files exported from Crowdin by removing the 3 heading dashes, setting the proper l_language and saving the file with BOM.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The24thDS/stellaris-localisation-crowdin-fix.git"
+  },
+  "keywords": [],
+  "author": "The24thDS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/The24thDS/stellaris-localisation-crowdin-fix/issues"
+  },
+  "homepage": "https://github.com/The24thDS/stellaris-localisation-crowdin-fix#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "recursive-readdir": "^2.2.2"
+  }
+}
