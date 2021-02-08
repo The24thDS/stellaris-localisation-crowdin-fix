@@ -5,7 +5,7 @@ const recursive = require('recursive-readdir');
 try {
   const localisationFolder = core.getInput('localisation_folder');
   console.log(`Fixing locs in: ${localisationFolder}`);
-  recursive(localisationFolder, ['!*.yml', '*_l_english.yml'], (err, files) => {
+  recursive(localisationFolder, ['!*.yml'], (err, files) => {
     if (err) {
       throw err;
     }
@@ -17,10 +17,15 @@ try {
         }
         const language = file.replace('.yml', ':').slice(file.indexOf('l_'));
         console.log(language);
-        const content = data
-          .replace('l_english:', '')
-          .replace('---', language)
-          .replace('\ufeff', '');
+        let content;
+        if (file.endsWith('_l_english.yml')) {
+          content = data.replace('\ufeff', '');
+        } else {
+          content = data
+            .replace('l_english:', '')
+            .replace('---', language)
+            .replace('\ufeff', '');
+        }
         fs.writeFile(file, `\ufeff${content}`, 'utf8', (err) => {
           if (err) {
             throw err;
